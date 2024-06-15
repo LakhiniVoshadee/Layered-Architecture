@@ -69,6 +69,7 @@ public class CustomerDAOImpl implements CustomerDAO{
         return pstm.executeQuery().next();
     }
 
+    @Override
     public ResultSet searchCustomer(String newValue) throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement pstm = connection.prepareStatement("SELECT * FROM Customer WHERE id=?");
@@ -77,4 +78,6 @@ public class CustomerDAOImpl implements CustomerDAO{
         rst.next();
         return rst;
     }
+
+
 }

@@ -19,4 +19,6 @@ public interface CustomerDAO {
     public ResultSet generateCustomerID(TextField txtCustomerId) throws SQLException, ClassNotFoundException ;
 
     public boolean existCustomerID(String id) throws SQLException, ClassNotFoundException ;
+
+    public ResultSet searchCustomer(String newValue) throws SQLException, ClassNotFoundException ;
 }
