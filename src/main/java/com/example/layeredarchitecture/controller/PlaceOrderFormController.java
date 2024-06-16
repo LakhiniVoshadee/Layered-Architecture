@@ -412,7 +412,7 @@ public class PlaceOrderFormController {
             for(OrderDetailDTO detail : orderDetails){
                 ItemDTO item = findItem(detail.getItemCode());
                 item.setQtyOnHand(item.getQtyOnHand() - detail.getQty());
-                boolean isItemUpdate = itemDAO.updateItemQty(orderDetails,item);
+                boolean isItemUpdate = itemDAO.updateItemQty((OrderDetailDTO) orderDetails,item);
                 if (!isItemUpdate) {
                     connection.rollback();
                     connection.setAutoCommit(true);
