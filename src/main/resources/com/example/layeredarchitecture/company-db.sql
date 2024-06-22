@@ -1,6 +1,6 @@
-create database company;
+create database company2;
 
-use company;
+use company2;
 
 DROP TABLE IF EXISTS `Customer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
